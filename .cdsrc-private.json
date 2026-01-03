@@ -1,0 +1,34 @@
+{
+  "requires": {
+    "[hybrid]": {
+      "hana": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "d69792b3trial",
+          "space": "dev",
+          "instance": "payroll-analytics",
+          "key": "payroll-analytics-key"
+        },
+        "kind": "hana-cloud",
+        "vcap": {
+          "name": "hana"
+        }
+      },
+      "db": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "d69792b3trial",
+          "space": "dev",
+          "instance": "payroll-analytics-cds-db",
+          "key": "payroll-analytics-cds-db-key"
+        },
+        "kind": "hana",
+        "vcap": {
+          "name": "db"
+        }
+      }
+    }
+  }
+}
