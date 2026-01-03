@@ -1,9 +1,10 @@
-namespace payroll.db;
+namespace project.db;
 
-entity Employee {
-  key ID       : Integer;
-      name     : String(100);
-      dept     : String(50);
-      salary   : Decimal(15,2);
-      joinDate : Date;
+entity Project {
+  key ID        : Integer;
+      name      : String(100);
+      manager   : String(50);
+      budget    : Decimal(15,2);
+      startDate : Date;
+      endDate   : Date;
 }
