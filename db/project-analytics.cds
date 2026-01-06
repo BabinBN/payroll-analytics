@@ -2,8 +2,11 @@ using project.db as db from './schema';
 
 namespace project.db;
 
-entity ProjectAnalytics as select from db.Project {   
-  key manager,                    
-      sum(budget) as budget : Decimal(15,2),
-      count(ID) as projectCount : Integer
-} group by manager;
+@Analytics.dataCategory: #CUBE
+entity ProjectAnalytics
+  as select from db.Project {
+    key ID           as projectId,
+        name         as projectName,
+        budget,
+        startDate
+};
